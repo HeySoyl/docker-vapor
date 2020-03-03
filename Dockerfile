@@ -10,8 +10,8 @@ RUN apt-get update \
     && git clone https://github.com/vapor/toolbox.git \
     && cd toolbox \
 #    && git checkout 18.0.0-beta.23 \
-    && swift build -c release -- disable-sandbox \
-    && mv .build/release/vapor /user/local/bin \
+    && swift build -c release --disable-sandbox \
+    && mv .build/release/vapor /usr/local/bin \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
