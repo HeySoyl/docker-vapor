@@ -9,7 +9,7 @@ RUN apt-get update \
     && apt-get install -y git zlib1g-dev libsqlite3-dev \
     && git clone https://github.com/vapor/toolbox.git \
     && cd toolbox \
-    && git checkout 18.0.0-beta.23 \
+#    && git checkout 18.0.0-beta.23 \
     && swift build -c release -- disable-sandbox \
     && mv .build/release/vapor /user/local/bin \
     && apt-get clean \
